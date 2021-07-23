@@ -16,7 +16,7 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-image: url('background.png');
+	background-image: url('../background.png');
 	overflow: hidden;
 }
 
@@ -36,9 +36,10 @@ body {
 	position: absolute;
 	top: 490px;
 	width: 100%;
-	font-size: 20px;
+	font-size: 30px;
+	font-weight: bold;
 	text-align: center;
-	color: #000;
+	color: #fff;
 }
 
 button {
@@ -80,11 +81,11 @@ button {
 	z-index: 2;
 	bottom: -30px;
 	background-size: contain;
-	background-image: url('sand1.png');
+	background-image: url('../sand1.png');
 }
 
 .mole {
-	background-image: url('yoda1.png');
+	background-image: url('../yoda1.png');
 	position: absolute;
 	top: 100%;
 	width: 100%;
@@ -93,6 +94,10 @@ button {
 	background-repeat: no-repeat;
 	background-position: bottom;
 	cursor: pointer;
+}
+
+.mole.hard {
+	background-image: url('../yoda2.png');
 }
 
 .mole.small {
@@ -105,4 +110,33 @@ button {
 
 .hole.up .mole {
 	top: 0;
+}
+
+.highest {
+	font-size: 25px;
+	color: #000;
+	font-weight: bold;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.ufo {
+	width: 100px;
+	height: 60px;
+	position: absolute;
+	top: 30px;
+	transform: translateX(1000%);
+
+	animation: ufo 10s alternate-reverse 0s infinite;
+}
+
+@keyframes ufo {
+	from {
+		transform: translateX(900%);
+	}
+
+	to {
+		transform: translateX(-900%);
+	}
 }
